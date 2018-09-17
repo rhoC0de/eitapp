@@ -4,6 +4,11 @@
     <div class="container">
       <header>
         <h1>EIT Database</h1>
+
+      <form class="new-task">
+        <input type="text" name="text" placeholder="Type to add new eit" />
+        <!-- <input type="submit" value="Add EIT"> -->
+      </form>
       </header>
   
       <ul>
@@ -15,7 +20,7 @@
 </body>
   
 <template name="eit">
-  <li>{{firstname}}: {{surname}}: {{gender}}: {{dob}}</li>
+  <li>{{firstname}} {{surname}} {{gender}} {{dob}}</li>
 </template>
   
   
