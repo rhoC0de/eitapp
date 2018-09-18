@@ -1,10 +1,15 @@
 import { Template } from 'meteor/templating';
+import { ReactiveDict } from 'meteor/reactive-dict';
 
 import { Eits } from '../api/eits.js';
 
 import './eit.js';
 
 import './body.html';
+
+Template.body.onCreated(function bodyOnCreated() {
+  this.state = new ReactiveDict();
+});
 
 Template.body.helpers({
   eits() {
