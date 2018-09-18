@@ -1,17 +1,17 @@
 import { Template } from 'meteor/templating';
 
-import { Tasks } from '../api/tasks.js';
+import { Eits } from '../api/eits.js';
 
 import './body.html';
 
 Template.body.helpers({
-  tasks() {
-    return Tasks.find({}, { sort: { createdAt: -1 } });
+  eits() {
+    return Eits.find({}, { sort: { createdAt: -1 } });
   },
 });
 
 Template.body.events({
-  'submit .new-task'(event) {
+  'submit .new-eit'(event) {
     // Prevent default browser form submit
     event.preventDefault();
 
@@ -23,7 +23,7 @@ Template.body.events({
     const dob = target.dob.value;
 
     // Insert a task into the collection
-    Tasks.insert({
+    Eits.insert({
       firstname,
       surname,
       gender,
