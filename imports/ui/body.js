@@ -44,4 +44,7 @@ Template.body.events({
     target.gender.value = '';
     target.dob.value = '';
   },
+  'change .delete input'(event, instance) {
+    instance.state.set('delete', event.target.checked);
+  },
 });
